@@ -10,9 +10,10 @@ window.siteAssetConfig = {
     gallery_smart_stick: "https://drive.google.com/thumbnail?id=1RZ9pyeET5sLMmHOMaywqF8HFaq_8q1Lw&sz=w1600",
     gallery_footer_image: "https://drive.google.com/thumbnail?id=13F9Zvm_wijzSSfV4mfCZT4sQf6RgGbEB&sz=w1600",
     gallery_prototype: "https://drive.google.com/thumbnail?id=1PTM8HLEjBMX0czVZmtstZW7mWDJi-BjM&sz=w1600",
-    website_submission_pdf: "Website.pdf",
     research_paper_pdf:
-      "https://docs.google.com/document/d/1ZxbqDCrL6Vl6OcCq-BuzqGlwHLRtKrXv/edit?usp=sharing&ouid=101993519803209114354&rtpof=true&sd=true",
+      "https://drive.google.com/file/d/1FPpjY3OExakDCsM2CTAsmnbz9lKkTGwf/view?usp=sharing",
+    project_proposal_progress_1_doc:
+      "https://drive.google.com/file/d/12X00H-nc9-y8Q_kqIEHyWaZEJrB4M8m7/view?usp=sharing",
     checklist_set_1_pdf:
       "https://drive.google.com/file/d/1havhBdg6nVM1hMbAugkyVnK28Yc6J4Pv/view?usp=sharing",
     proposal_report_it22605498:
