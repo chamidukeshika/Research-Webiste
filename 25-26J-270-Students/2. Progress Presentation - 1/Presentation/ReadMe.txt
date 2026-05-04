@@ -1,1 +1,0 @@
-* Use the same template given for proposal presentation.

@@ -30,9 +30,57 @@ const galleryModalCloseButton = document.querySelector('.gallery-modal-close');
 const galleryModalCloseButtons = Array.from(document.querySelectorAll('[data-gallery-close]'));
 const galleryPrevButton = document.querySelector('[data-gallery-prev]');
 const galleryNextButton = document.querySelector('[data-gallery-next]');
+const assetConfig = window.siteAssetConfig?.assets || {};
 
 let activeGalleryIndex = 0;
 let lastGalleryTrigger = null;
+
+function resolveAssetUrl(assetId, fallback = '') {
+  return assetConfig[assetId] || fallback;
+}
+
+function applyAssetConfig() {
+  const srcNodes = Array.from(document.querySelectorAll('[data-asset-src]'));
+  const hrefNodes = Array.from(document.querySelectorAll('[data-asset-href]'));
+  const gallerySrcNodes = Array.from(document.querySelectorAll('[data-asset-gallery-src]'));
+  const footerBackgroundUrl = resolveAssetUrl('footer_background');
+
+  srcNodes.forEach((node) => {
+    const assetId = node.dataset.assetSrc;
+    const fallback = node.getAttribute('src') || '';
+    const resolved = resolveAssetUrl(assetId, fallback);
+
+    if (resolved) {
+      node.setAttribute('src', resolved);
+    }
+  });
+
+  hrefNodes.forEach((node) => {
+    const assetId = node.dataset.assetHref;
+    const fallback = node.getAttribute('href') || '#';
+    const resolved = resolveAssetUrl(assetId, fallback);
+
+    if (resolved) {
+      node.setAttribute('href', resolved);
+    }
+  });
+
+  gallerySrcNodes.forEach((node) => {
+    const assetId = node.dataset.assetGallerySrc;
+    const fallback = node.dataset.gallerySrc || '';
+    const resolved = resolveAssetUrl(assetId, fallback);
+
+    if (resolved) {
+      node.dataset.gallerySrc = resolved;
+    }
+  });
+
+  if (footerBackgroundUrl) {
+    document.documentElement.style.setProperty('--footer-background-image', `url("${footerBackgroundUrl}")`);
+  }
+}
+
+applyAssetConfig();
 
 function optimizeImageLoading() {
   const contentImages = Array.from(document.querySelectorAll('main img'));

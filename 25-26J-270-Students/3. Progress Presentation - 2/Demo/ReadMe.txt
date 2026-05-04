@@ -1,1 +1,0 @@
-* Upload demo content if applicable.

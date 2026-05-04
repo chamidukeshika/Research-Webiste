@@ -1,1 +1,0 @@
-Include research paper in .pdf format.

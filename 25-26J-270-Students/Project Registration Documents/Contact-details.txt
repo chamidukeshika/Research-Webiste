@@ -1,6 +1,0 @@
-Student ID      Student name	   SLIIT email	               Mobile
-
-1.IT22605498    GAMAGE C.K         it22605498@my.sliit.lk      0703902116     
-2.IT22605320    ERANDI M.A.G.G.K   it22605320@my.sliit.lk      0766912026
-3.IT22605948    UDARANGA H.M.L     it22605948@my.sliit.lk      0701407817
-4.IT22592392    VINDUNU B.H.B.S    it22592392@my.sliit.lk      0785547762
